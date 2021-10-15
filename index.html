@@ -13,18 +13,25 @@
 <body>
     <div class="root">
         <header>
-
             <a id="logo" href="Index.html">PROLOGO</a>
 
             <input type="text" placeholder="Search products...">
 
-            <a class="cta" href="#" target="_self"><button class="btn">Search</button></a>
+            <a class="cta" href="#" target="_self"><button class="search-btn btn">Search</button></a>
 
             <nav>
-                <ul class="navlinks">
-                    <li><a href="#" target="_self">Cart</a></li>
-                    <li><a href="#" target="_self">Sign in</a></li>
+                <ul class="navlinks hidden">
+                    <li><a href="cart.html" target="_self">Cart</a></li>
+                    <li><a href="login.html" target="_self">Sign in</a></li>
                 </ul>
+                <div class="navlinks">
+                    menu
+                    <div class="drop-down transition">
+                        <div class="drop-down-menu">Cart</div>
+                        <div class="drop-down-menu">Sign in</div>
+                    </div>
+
+                </div>
             </nav>
 
         </header>
@@ -35,7 +42,7 @@
             <div class="row">
                 <div class="column">
                     <div class="column-content">
-                        <a href="">
+                        <a href="product.html">
                             <div class="product-image">
                                 <img class="image" src="images/Miku.jpg" alt="">
                             </div>
@@ -149,7 +156,7 @@
         <footer>
             <p>2021 Mendokusai.me,<a href="#"> Contact</a></p>
         </footer>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="index.js" charset="utf-8"></script>
 </body>
 
