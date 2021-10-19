@@ -6,13 +6,77 @@
     font-family: "Montserrat", sans-serif;
 }
 
+:root {
+    --accent-color: #5e5e5e41;
+    --dark-color: #3A3838;
+    --light-font-color: #dbd9d9;
+    --grey-font-color: #686060;
+    --lightBlue: #E0E7E7;
+    --white: #fff;
+    --black: #000;
+    --grey: #5e5e5e;
+    font-size: 62.5%;
+}
+
+
+/* body {
+    font-size: 1em;
+} */
+
+.main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1em;
+}
+
+.main h1 {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding: 1% 0;
+}
+
+.btn {
+    padding: 0.6em 1.5em;
+    height: 2.5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+hr {
+    border: none;
+    height: 0.2em;
+    background: var(--accent-color);
+}
+
+input[type="text"] {
+    font-size: 1.6rem;
+    height: 2.5em;
+    border: 1px solid grey;
+    padding: 0.625em 1.5em;
+}
+
+input[type="text"]::placeholder {
+    font-size: 1.4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.image {
+    max-width: 100%;
+}
+
 
 /* nav */
 
 li,
 a,
 .search-btn {
-    color: #dbd9d9;
+    color: var(--light-font-color);
     text-decoration: none;
 }
 
@@ -21,18 +85,33 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 30px 2%;
-    background: rgb(58, 56, 56);
+    background: var(--dark-color);
 }
 
 #logo {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .search-input {
-    margin: 0px 0px 0px 10px;
+    margin-left: 0.625em;
     width: 300px;
     border-radius: 50px;
+}
+
+.search-btn {
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    margin-left: 1.25em;
+}
+
+.search-btn:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.cta {
+    margin-right: auto;
 }
 
 .navlinks {
@@ -41,8 +120,9 @@ header {
 }
 
 .navlinks li {
+    font-size: 1.6rem;
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 1.25em;
 }
 
 .navlinks li a {
@@ -50,67 +130,15 @@ header {
 }
 
 .navlinks li a:hover {
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 .navlinks li a.active {
-    color: rgb(255, 255, 255);
-}
-
-.search-btn {
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    margin-left: 20px;
-}
-
-.cta {
-    margin-right: auto;
-}
-
-.search-btn:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+    color: var(--white);
 }
 
 
 /* nav */
-
-body {
-    font-size: 1em;
-}
-
-.main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 10px;
-}
-
-.main h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: lighter;
-}
-
-.btn {
-    padding: 9px 25px;
-    height: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    font-weight: 500;
-    font-size: 1em;
-}
-
-hr {
-    border: none;
-    height: 2px;
-    background: #5e5e5e41;
-}
-
-input[type="text"] {
-    height: 40px;
-    border: 1px solid grey;
-    padding: 20px;
-}
 
 
 /* rows */
@@ -119,18 +147,16 @@ input[type="text"] {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* background: purple; */
 }
 
 .column {
     flex-basis: 25%;
-    /* background: red; */
     height: 400px;
-    padding: 10px;
+    padding: 1em;
 }
 
 .column-content {
-    /* background: green; */
+    font-size: 1.6rem;
     width: 100%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -141,26 +167,21 @@ input[type="text"] {
     box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
 }
 
-.image {
-    max-width: 100%;
-}
-
 .product-image {
-    /* background: yellowgreen; */
     width: 100%;
     height: 60%;
     overflow: hidden;
 }
 
 .product-name {
-    /* background: honeydew; */
     width: 100%;
     height: 40%;
     padding: 5%;
 }
 
 .product-name h2 {
-    margin-top: 20px;
+    font-size: 2.4rem;
+    margin-top: 1.25em;
 }
 
 .column-content a {
@@ -185,15 +206,9 @@ input[type="text"] {
 
 .add-to-cart {
     width: 100%;
-    background: rgb(58, 56, 56);
-    color: white;
+    background: var(--dark-color);
+    color: var(--white);
     border: none;
-}
-
-.product-column {
-    flex-basis: 33%;
-    height: 400px;
-    padding: 10px;
 }
 
 .product-column-1 {
@@ -212,7 +227,7 @@ input[type="text"] {
     flex: 1 1 25%;
 }
 
-.product-img {
+.product-page-img {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -225,7 +240,11 @@ input[type="text"] {
 .product-des h1,
 p {
     padding: 0 5%;
-    color: rgb(104, 96, 96);
+    color: var(--grey-font-color);
+}
+
+.product-des p {
+    font-size: 1.6rem;
 }
 
 .product-des hr {
@@ -254,9 +273,9 @@ p {
 
 .product-detail-item .row p {
     flex-basis: 50%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-align: center;
-    color: gray;
+    color: var(--grey-font-color);
     padding: 0%;
 }
 
@@ -269,16 +288,17 @@ p {
 }
 
 .review {
-    /* background: blue; */
     height: 200px;
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
 }
 
-.review p {
+.review p,
+h2 {
+    font-size: 1.6rem;
     padding: 1%;
-    color: black;
+    color: var(--black);
 }
 
 
@@ -288,9 +308,9 @@ p {
 /* register */
 
 .register {
-    background: rgb(224, 231, 231);
+    background: var(--lightBlue);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: max-content;
+    width: 350px;
     margin: auto;
     padding: 1%;
     border-radius: 2%;
@@ -300,13 +320,18 @@ p {
     padding: 2% 0;
 }
 
-.register h4,
-h1 {
+.register h1,
+h4 {
     padding: 1% 0;
 }
 
+.register h4 {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
 .register .register-input {
-    width: 300px;
+    width: 100%;
     margin: 0;
     height: 40px;
     border-radius: 10px;
@@ -317,10 +342,14 @@ h1 {
 .register-btn {
     display: block;
     margin: 3% 0;
-    width: 300px;
-    background: rgba(0, 136, 169, 1);
+    width: 100%;
+    background: rgba(0, 136, 169, 0.8);
     border: none;
     border-radius: 10px;
+}
+
+.register-btn:hover {
+    background: rgba(0, 136, 169, 1);
 }
 
 
@@ -356,22 +385,19 @@ h1 {
 /* footer */
 
 footer {
+    font-size: 1.6rem;
     text-align: center;
     color: inherit;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 footer a {
-    color: #5e5e5e;
+    color: var(--grey);
 }
 
 footer a:hover {
-    color: grey;
+    color: var(--black);
     transition: all 0.3s ease 0s;
-}
-
-.hidden {
-    display: none;
 }
 
 
@@ -379,24 +405,19 @@ footer a:hover {
 
 @media screen and (max-width: 1100px) {
     .column {
-        /* background: red; */
         flex-basis: 33%;
         height: 500px;
-        padding: 10px;
     }
     .main {
         max-width: 900px;
         margin: auto;
-        padding: 10px;
     }
 }
 
 @media screen and (max-width: 750px) {
     .column {
-        /* background: red; */
         flex-basis: 50%;
         height: 600px;
-        padding: 10px;
     }
     .product-column-1 {
         flex: 1 1 100%;
@@ -439,29 +460,32 @@ footer a:hover {
         border-radius: 10px;
         text-align: center;
         overflow: hidden;
-        background: red;
+        transition: all 0.3s ease 0s;
+        background: rgba(255, 0, 0, 0.466);
     }
     .navlinks-drop-down:hover {
-        box-shadow: red;
+        background: rgb(255, 0, 0);
     }
     .drop-down {
         height: 100vh;
         width: 150px;
         text-align: center;
         position: absolute;
-        top: 13.7%;
+        top: 100px;
         right: 0%;
-        transform: translateX(0);
-        /* background: chartreuse; */
-        background: rgb(58, 56, 56);
+        background: var(--dark-color);
+    }
+    .drop-down .drop-down-menu {
+        font-size: 1.6rem;
+        background: var(--dark-color);
+        color: var(--light-font-color);
     }
     .drop-down-menu {
         padding: 10px 0;
+        transition: all 0.3s ease 0s;
     }
-    .drop-down .drop-down-menu {
-        /* background: blue; */
-        background: rgb(58, 56, 56);
-        color: #dbd9d9;
+    .drop-down-menu a:hover {
+        color: var(--white);
     }
     .transition {
         height: 100vh;
@@ -511,5 +535,8 @@ footer a:hover {
     }
     .main hr {
         margin: 2%;
+    }
+    .register {
+        width: 100%;
     }
 }
