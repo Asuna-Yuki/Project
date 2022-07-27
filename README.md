@@ -1,6 +1,6 @@
 # Update
 
-Currently this project is being updated in another repo...
+Currently this project is being hosted in another repo...
 <br>
 Deployed to <b>heroku<b/>
 <br>
